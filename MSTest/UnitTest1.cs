@@ -16,5 +16,12 @@ namespace MSTest
             bool result = adapter.AddEmployee();
             Assert.IsTrue(result);
         }
+        //Checking whether the datas are added to the two rows or not
+        [TestMethod]
+        public void InsertQueryAddsIntoEmployeeAndSalaryTable() {
+            string expected = "Both records were written to database.";
+            string actual = adapter.AddEmployeeAndSalary();
+            Assert.AreEqual(actual, expected);
+        }
     }
 }
