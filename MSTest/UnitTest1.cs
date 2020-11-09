@@ -23,5 +23,12 @@ namespace MSTest
             string actual = adapter.AddEmployeeAndSalary();
             Assert.AreEqual(actual, expected);
         }
+        //Checking whether the datas are deleted from both the tables
+        [TestMethod]
+        public void DeleteFromTable() {
+            string expected = "Both records were deleted.";
+            string actual = adapter.RemoveEmployee();
+            Assert.AreEqual(actual, expected);
+        }
     }
 }
